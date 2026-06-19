@@ -8,10 +8,18 @@ Gem::Specification.new do |spec|
   spec.name          = 'mozaik'
   spec.version       = Mozaik::Service::VERSION
   spec.authors       = ['Mohamed Elmenisy']
-  spec.email         = ['mohamed.elmenisy@hive.app']
 
   spec.summary       = 'Service layer abstraction'
   spec.license       = 'MIT'
+  spec.homepage      = 'https://github.com/menisy/mozaik'
+
+  spec.required_ruby_version = '>= 3.0'
+
+  spec.metadata = {
+    'source_code_uri'       => spec.homepage,
+    'bug_tracker_uri'       => "#{spec.homepage}/issues",
+    'rubygems_mfa_required' => 'true'
+  }
 
   spec.files         = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
